@@ -58,7 +58,7 @@ function FixSocialIcon() {
         <ul>
           <li className="item">
             <a
-              href="https://www.linkedin.com/in/pedro-sales-muniz"
+              href="https://www.linkedin.com/in/franco-bossio-32195b1b7/"
               target="_blank"
               rel="noopener noreferrer"
             >

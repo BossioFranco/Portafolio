@@ -52,6 +52,13 @@ export const NavMenu = styled.div`
   }
 `;
 
+export const DownloadLink = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+`;
+
 export const NavBtn = styled.div`
   display: flex;
   align-items: center;

@@ -2,6 +2,7 @@ import React from "react";
 import { FaTimes } from "react-icons/fa";
 import styled from "@emotion/styled";
 import { Link as ScrollLink } from "react-scroll";
+import { AiOutlineDownload } from 'react-icons/ai';
 
 const SiderBar = styled.div`
   background: #151418;
@@ -55,7 +56,12 @@ export const NavBtn = styled.div`
   margin-top: 5rem;
   font-size: 1.7rem;
 `;
-
+export const DownloadLink = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+`;
 function Dropdown({ isOpen, toggle }) {
   return (
     <SiderBar isOpen={isOpen} onClick={toggle}>
@@ -83,16 +89,14 @@ function Dropdown({ isOpen, toggle }) {
           Contact
         </NavLink>
       </NavMenu>
-      <NavBtn onClick={toggle}>
-        <a
-          className="btn PrimaryBtn"
-          href="https://linkedin.com/in/pedro-sales-muniz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
-      </NavBtn>
+      <NavBtn>
+          <a className="btn PrimaryBtn" download href='./FrancoBossiocv.pdf'>
+            <DownloadLink>
+              Download CV
+              <AiOutlineDownload style={{marginLeft:5}}/>
+            </DownloadLink>
+          </a>
+        </NavBtn>
     </SiderBar>
   );
 }

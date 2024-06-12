@@ -1,9 +1,10 @@
 import React from "react";
-import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from "./HeaderElements";
+import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn, DownloadLink } from "./HeaderElements";
+import { AiOutlineDownload } from 'react-icons/ai'; // Importa el icono de descarga
 
 const Header = ({ toggle }) => {
   return (
-    <div className="Container" style={{padding: 0}}>
+    <div className="Container" style={{ padding: 0 }}>
       <Nav>
         <Logo to="/">
           <img
@@ -23,13 +24,11 @@ const Header = ({ toggle }) => {
           </NavLink>
         </NavMenu>
         <NavBtn>
-          <a
-            className="btn PrimaryBtn"
-            href="https://linkedin.com/in/pedro-sales-muniz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
+          <a className="btn PrimaryBtn" download href='./FrancoBossiocv.pdf'>
+            <DownloadLink>
+              Download CV
+              <AiOutlineDownload style={{marginLeft:5}}/>
+            </DownloadLink>
           </a>
         </NavBtn>
         <Bars onClick={toggle} />
